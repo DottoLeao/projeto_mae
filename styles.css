@@ -3,54 +3,145 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-:root {
-  --cor-primaria: #D1D7F7;
-  --cor-header: #ffffff
+/* resetcss acima*/
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+:root {
+  --cor-primaria: #272727;
+  --cor-secundaria: #7c7c7c;
+  --cor-header: #ffffff;
+  --cor-forte: #0068f0;
+  --fonte-primaria: "Poppins", serif;
+  --fonte-secundaria: "Ubuntu", sans-serif;
+}
+
+body {
+  font-family: var(--fonte-primaria);
 }
 
 .header {
@@ -72,8 +163,11 @@ table {
 .slideshow-container {
   position: relative;
   width: 500px; /* Ajuste a largura conforme necessário */
-  height: 300px; /* Ajuste a altura conforme necessário */
+  height: 600px; /* Ajuste a altura conforme necessário */
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slide {
@@ -84,8 +178,67 @@ table {
   height: 100%;
   opacity: 0;
   transition: opacity 1s ease-in-out; /* Efeito de transição suave */
+  z-index: 1;
+  filter: grayscale(300%) blur(1px);
 }
 
 .slide.active {
   opacity: 1;
+}
+
+.frase-slideshow {
+  position: relative; /* Permite posicionar o título em relação ao contêiner */
+  z-index: 2;
+  font-size: 50px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.sobre {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sobre-palavra {
+  margin-top: 4rem;
+  font-size: normal;
+  font-weight: 600;
+  color: var(--cor-forte);
+  font-family: var(--fonte-secundaria);
+  font-style: normal;
+  letter-spacing: 2px;
+}
+
+.sobre-nome {
+  color: var(--cor-primaria);
+  font-size: xx-large;
+  margin-top: 2rem;
+}
+
+hr {
+  border: none;
+  width: 80px;
+  height: 0.5px; /* Define a espessura */
+  background-color: var(--cor-forte); /* Define a cor */
+  margin-top: 2rem;
+}
+
+.sobre-frase {
+  margin: 1rem 2rem;
+  font-size: x-large;
+  font-family: var(--fonte-secundaria);
+  text-align: center;
+  color: var(--cor-forte);
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+.sobre-paragrafo {
+  margin: 1.5rem 2rem;
+  font-size: x-large;
+  font-family: var(--fonte-secundaria);
+  text-align: justify;
+  color: var(--cor-secundaria);
+  line-height: 2rem;
 }

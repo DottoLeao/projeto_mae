@@ -16,4 +16,4 @@ function nextSlide() {
   showSlide(currentSlide);
 }
 
-setInterval(nextSlide, 2000); // Troca de imagem a cada 2 segundos
+setInterval(nextSlide, 5000); // Troca de imagem a cada 2 segundos
