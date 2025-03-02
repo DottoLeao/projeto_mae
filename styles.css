@@ -297,3 +297,42 @@ hr {
   color: var(--cor-header);
   transition: 300ms;
 }
+
+.atuacao:last-child {
+  margin-bottom: 5rem;
+}
+
+.fale_conosco {
+  background: linear-gradient(rgba(227, 227, 227, 0.6), rgba(227, 227, 227, 0.6)),
+    url("./Recursos/beautiful-view-sunset-sea.jpg");
+  background-size: cover; /* Ajusta a imagem para cobrir toda a section */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
+  height: 600px; /* Altura da section */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Cor do texto para contraste */
+  text-align: center;
+}
+
+.fale_conosco-titulo {
+  color: var(--cor-header);
+  margin-bottom: 2rem;
+}
+
+.fale_conosco-botao {
+  padding: 1.5rem;
+  font-size: x-large;
+  background-color:inherit;
+  border: 3px solid var(--cor-forte);
+  color: var(--cor-header);
+  letter-spacing: 1.5px;
+}
+
+strong {
+  color: #042d62;
+  font-weight: 700;
+
+}
